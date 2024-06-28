@@ -314,8 +314,9 @@ console.log(numberOfMovies);
 */
 function onlyTheYears() {
   const movieYears = [];
-  for (i = 0; i < movies.length; i++);
-  movieYears.push(movies[i].Year);
+  for (i = 0; i < movies.length; i++) {
+    movieYears.push(movies[i].Year);
+  }
   return movieYears;
 }
 const releaseYears = onlyTheYears(movies);
@@ -328,6 +329,15 @@ console.log(releaseYears);
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
+// function sumAllTheYears() {
+//   const sumRelease = 0;
+//   for (i = 0; i < movies.length; i++) {
+//     const sumYears = (movies[i].Year) + sumRelease;
+//   }
+//   return sumYears;
+// }
+// const sumReleaseYears = sumAllTheYears(movies);
+// console.log(sumReleaseYears);
 
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
@@ -340,8 +350,12 @@ console.log(releaseYears);
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
-*/
-
+*/ function removeIndex(num) {
+  newList = movies.slice(1);
+  return newList;
+}
+const listUpdated = removeIndex(movies);
+console.log(listUpdated);
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
@@ -367,6 +381,17 @@ console.log(tdHTML);
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
+function printTD() {
+  const tds = document.querySelectorAll("td");
+
+  for (const i = 0; i < tds.length; i++) {
+    const text = tds[i];
+    return text;
+  }
+}
+const tdText = printTD();
+console.log(i + 1, tdText);
+
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
@@ -374,7 +399,13 @@ console.log(tdHTML);
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
-*/
+*/function addItemToList(text) {
+  const newItem = document.createElement('li');
+  newItem.textContent = text;
+  const list = document.getElementById('myList');
+  list.appendChild(newItem);
+}
+addItemToList("latte");
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
