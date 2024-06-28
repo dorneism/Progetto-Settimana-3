@@ -356,6 +356,7 @@ console.log(releaseYears);
 }
 const listUpdated = removeIndex(movies);
 console.log(listUpdated);
+
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
@@ -398,14 +399,11 @@ console.log(i + 1, tdText);
 */function addBackground() {
   const links = document.getElementsByTagName('a');
 
-  // Itera su ogni elemento <a> e imposta il background di colore rosso
-  for (var i = 0; i < links.length; i++) {
+  for (const i = 0; i < links.length; i++) {
     links[i].style.backgroundColor = 'red';
   }
 }
-
-// Esempio di utilizzo della funzione per aggiungere il background rosso a tutti i link
-addRedBackgroundToLinks();
+addBackground();
 
 
 /* ESERCIZIO 24
@@ -429,9 +427,7 @@ function addClassToTr() {
   const newClass = document.getElementsByTagName("tr");
   for (i = 0; i < newClass.length; i++) {
     newClass[i].className()
-
   }
-
 }
 addClassToTr("test");
 
