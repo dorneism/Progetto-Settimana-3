@@ -382,7 +382,7 @@ console.log(tdHTML);
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 function printTD() {
-  const tds = document.querySelectorAll("td");
+  const tds = document.getElementsByTagName("td");
 
   for (const i = 0; i < tds.length; i++) {
     const text = tds[i];
@@ -395,7 +395,18 @@ console.log(i + 1, tdText);
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
-*/
+*/function addBackground() {
+  const links = document.getElementsByTagName('a');
+
+  // Itera su ogni elemento <a> e imposta il background di colore rosso
+  for (var i = 0; i < links.length; i++) {
+    links[i].style.backgroundColor = 'red';
+  }
+}
+
+// Esempio di utilizzo della funzione per aggiungere il background rosso a tutti i link
+addRedBackgroundToLinks();
+
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
@@ -414,6 +425,15 @@ addItemToList("latte");
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+function addClassToTr() {
+  const newClass = document.getElementsByTagName("tr");
+  for (i = 0; i < newClass.length; i++) {
+    newClass[i].className()
+
+  }
+
+}
+addClassToTr("test");
 
 // [EXTRA] JS Avanzato
 
